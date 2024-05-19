@@ -1,0 +1,101 @@
+.container{
+    display:grid;
+grid-template-columns: 300px 250px 250px 250px 250px 250px;
+/*criação de grid em 7 colunas*/
+grid-template-rows: 125px 125px 125px 125px 125px 50px;
+/*criação de grid em 7 linhas*/
+
+}
+/*Criação das caixas do site*/
+.boxcabecario{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: #b90504;
+    color: #f6f6f6;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+}
+.boxcentraltotal{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: #333333;
+    text-align: justify;
+    color: #e8e8e8;
+    padding: 1%;
+
+}
+.boxcantoesquerdo{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: #990100;
+    text-align: justify;
+    padding: 10%;
+    color: #e8e8e8;
+
+}
+/*rodapé*/
+.boxrodape{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    background-color: #b90504;
+    color: #f6f6f6;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+/*estilização de textos*/
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
+}
+li{
+    display: inline;
+    color: #f6f6f6;
+    width: 200px;
+    padding: 10px;
+
+}
+a{
+    color: yellow;
+    font-weight: bolder;
+}
+
+/*estilo de imagens*/
+aside > img {
+    float: none;
+    justify-content: center;
+    display: flex;
+    border-radius: 25%;
+    align-items: center;
+    max-width: 250px;
+    max-height: 250px;
+}
+/* Esta parte consultei no chat GBT, ainda não compreendi muito bem ela. Continuarei a me aprofundar no assunto */
+/* Ajustes para telas menores, como tablets */
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+        grid-template-rows: auto; /* Altura automática */
+    }
+}
+
+/* Ajustes para telas muito pequenas, como celulares */
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* Uma única coluna de largura igual */
+    }
+}
